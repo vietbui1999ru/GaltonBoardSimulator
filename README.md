@@ -7,3 +7,5 @@ To start:
 Install: pip install pygame, pymunk, pygame_gui, matplotlib, numpy, scipy
 
 Run: python main.py
+
+Reference: https://github.com/StanislavPetrovV/Python-Galton-Board-
