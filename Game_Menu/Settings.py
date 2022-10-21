@@ -5,12 +5,16 @@ import pygame as pg
 import pygame_gui as ui
 from Objects.InputBox import InpBox
 
+
 def set_timer():
     return pg.time.Clock()
+
 
 def create_surface(w, h):
     surface = pg.display.set_mode((w, h))
     return surface
+
+
 class Settings:
 
     def __init__(self, res=(800, 800), color=(255, 255, 255),
@@ -25,6 +29,7 @@ class Settings:
 
     def input_(self, text):
         pass
+
     def start(self):
         surface = create_surface(self.res[0], self.res[1])
         clock = set_timer()
@@ -58,4 +63,3 @@ class Settings:
 
             pg.display.flip()
             clock.tick(30)
-

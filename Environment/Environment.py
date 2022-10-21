@@ -4,6 +4,7 @@ import pygame as pg
 import pymunk as pm
 import pymunk.pygame_util
 from random import randrange
+
 matplotlib.use('Agg')
 import matplotlib.backends.backend_agg as agg
 
@@ -13,6 +14,7 @@ from Objects.Peg import Peg
 from Objects.Segment import Segment
 from Environment.Probability import Prob
 from Game_Menu.Settings import Settings
+
 pm.pygame_util.positive_y_is_up = False
 
 NUM_BALLS = Settings().num_balls
@@ -33,9 +35,12 @@ FPS = 60
 def set_timer():
     return pg.time.Clock()
 
+
 def create_surface(w, h):
     surface = pg.display.set_mode((w, h))
     return surface
+
+
 class Environment:
     # Create the Environment of Galton Board
     def __init__(self, w=WIDTH, h=HEIGHT, g=G, fps=FPS):
@@ -49,7 +54,6 @@ class Environment:
         self.space = space
 
     # create surface of environment
-
 
     # set timer for the environment
 
@@ -125,7 +129,7 @@ class Environment:
             clock.tick(self.fps)
 
     def start_p(self):
-        fig = plt.figure(figsize=(5,5))
+        fig = plt.figure(figsize=(5, 5))
         # plt.scatter(Prob().bell_curve()[0], Prob().bell_curve()[1], marker='o', s=25, color='red')
         plt.bar(range(Prob().get_lines() + 1), Prob().start_p())
         canvas = agg.FigureCanvasAgg(fig)
@@ -142,7 +146,7 @@ class Environment:
         while show:
             for event in pg.event.get():
                 if event.type == pg.QUIT:
-                    #Stop showing when quit
+                    # Stop showing when quit
                     show = False
             pg.display.update()
 

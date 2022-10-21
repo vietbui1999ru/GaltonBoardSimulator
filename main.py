@@ -5,11 +5,12 @@ import pygame_gui as ui
 from Environment.Environment import Environment
 from Game_Menu.Simulation_menu import Menu
 from Game_Menu.Settings import Settings
-#This is text input
+
+# This is text input
 WIDTH = 800
 HEIGHT = 800
 
-#size settings
+# size settings
 x1 = -40
 x2 = 100
 start_y1_g = -140
@@ -48,17 +49,20 @@ while True:
         if ev.type == pg.MOUSEBUTTONDOWN:
 
             # if the mouse is clicked on the button
-            if width / 2 + x1 <= mouse[0] <= width / 2 + x2 and height / 2 + start_y1_g <= mouse[1] <= height / 2 + start_y2_g:
+            if width / 2 + x1 <= mouse[0] <= width / 2 + x2 and height / 2 + start_y1_g <= mouse[
+                1] <= height / 2 + start_y2_g:
                 pg.quit()
                 Environment(WIDTH, HEIGHT).start_g()
             # the simulation will start
-            if width / 2 + x1 <= mouse[0] <= width / 2 + x2 and height / 2 + start_y1_p <= mouse[1] <= height / 2 + start_y2_p:
+            if width / 2 + x1 <= mouse[0] <= width / 2 + x2 and height / 2 + start_y1_p <= mouse[
+                1] <= height / 2 + start_y2_p:
                 pg.quit()
                 Environment(WIDTH, HEIGHT).start_p()
 
             # if the mouse is clicked on the button
             # directs to settings of the game
-            elif width / 2 + x1 <= mouse[0] <= width / 2 + x2 and height / 2 + settings_y1 <= mouse[1] <= height / 2 + settings_y2:
+            elif width / 2 + x1 <= mouse[0] <= width / 2 + x2 and height / 2 + settings_y1 <= mouse[
+                1] <= height / 2 + settings_y2:
                 pg.quit()
                 Settings().start()
 

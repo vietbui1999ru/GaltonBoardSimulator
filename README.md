@@ -6,6 +6,7 @@ To start:
 
 Install: pip install pygame, pymunk, pygame_gui, matplotlib, numpy, scipy
 
+Execute the pip_or_bpiped.py script to get the required dependencies
 Run: python main.py
 
 Reference: https://github.com/StanislavPetrovV/Python-Galton-Board-
